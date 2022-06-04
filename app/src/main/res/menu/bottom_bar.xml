@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/outline_sports_esports_white_24"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/newsFragment"
+            android:icon="@drawable/outline_feed_white_24"
+            android:title="News" />
+        <item
+            android:id="@+id/searchFragment"
+            android:icon="@drawable/outline_search_white_24"
+            android:title="Search" />
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/outline_person_white_24"
+            android:title="Profile" />
+
+</menu>
