@@ -6,12 +6,16 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.317" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.3310810810810811" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19413092550790068" />
+        <entry key="app/src/main/res/layout/game_detail_fragment.xml" value="0.2909067789713542" />
         <entry key="app/src/main/res/layout/game_fragment.xml" value="0.40989583333333335" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.3340909090909091" />
-        <entry key="app/src/main/res/layout/item_game.xml" value="0.2869791666666667" />
+        <entry key="app/src/main/res/layout/item_game.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_mascota.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/item_platform.xml" value="0.4244791666666667" />
+        <entry key="app/src/main/res/layout/item_platforms.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.40989583333333335" />
         <entry key="app/src/main/res/layout/news_fragment.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/platform_fragment.xml" value="0.375" />
         <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.375" />
         <entry key="app/src/main/res/layout/search_fragment.xml" value="0.375" />
         <entry key="app/src/main/res/menu/bottom_bar.xml" value="0.40989583333333335" />

@@ -7,19 +7,14 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.seekgame.R
 
-class GameHolder (v: View) : RecyclerView.ViewHolder(v) {
+class PlatformHolder (v: View) : RecyclerView.ViewHolder(v) {
     private var view: View = v
 
-    fun setName(name: String) {
-        val txt: TextView = view.findViewById(R.id.txtGameName)
-        txt.text = name
-    }
-
     fun getImageView () : ImageView {
-        return view.findViewById(R.id.ivGameImage)
+        return view.findViewById(R.id.ivPlatformImage)
     }
 
     fun getCardLayout (): CardView {
-        return view.findViewById(R.id.cvGameItem)
+        return view.findViewById(R.id.cvPlatformItem)
     }
 }

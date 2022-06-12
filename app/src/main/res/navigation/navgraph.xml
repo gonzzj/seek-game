@@ -9,15 +9,23 @@
         android:name="com.example.seekgame.fragments.HomeFragment"
         android:label="HomeFragment" />
     <fragment
-        android:id="@+id/newsFragment"
-        android:name="com.example.seekgame.fragments.NewsFragment"
-        android:label="NewsFragment" />
-    <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.seekgame.fragments.ProfileFragment"
         android:label="ProfileFragment" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.seekgame.fragments.SearchFragment"
-        android:label="SearchFragment" />
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_gameDetail"
+            app:destination="@id/gameDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/platformFragment"
+        android:name="com.example.seekgame.fragments.PlatformFragment"
+        android:label="PlatformFragment" />
+    <fragment
+        android:id="@+id/gameDetailFragment"
+        android:name="com.example.seekgame.fragments.GameDetail"
+        android:label="GameDetailFragment" />
 </navigation>

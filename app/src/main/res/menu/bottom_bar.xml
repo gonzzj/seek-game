@@ -3,20 +3,20 @@
 
         <item
             android:id="@+id/homeFragment"
-            android:icon="@drawable/outline_sports_esports_white_24"
-            android:title="Home" />
+            android:icon="@drawable/outline_grade_white_24"
+            android:title="Favoritos" />
 
-        <item
-            android:id="@+id/newsFragment"
-            android:icon="@drawable/outline_feed_white_24"
-            android:title="News" />
         <item
             android:id="@+id/searchFragment"
             android:icon="@drawable/outline_search_white_24"
-            android:title="Search" />
+            android:title="Buscador" />
+        <item
+            android:id="@+id/platformFragment"
+            android:icon="@drawable/outline_games_white_24"
+            android:title="Plataformas" />
         <item
             android:id="@+id/profileFragment"
             android:icon="@drawable/outline_person_white_24"
-            android:title="Profile" />
+            android:title="Perfil" />
 
 </menu>

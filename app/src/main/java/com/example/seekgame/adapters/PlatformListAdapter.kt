@@ -9,22 +9,22 @@ import com.bumptech.glide.Glide
 import com.example.seekgame.holders.GameHolder
 import com.example.seekgame.R
 import com.example.seekgame.entities.Game
+import com.example.seekgame.entities.Platform
 import com.example.seekgame.fragments.GameFragment
 import com.example.seekgame.fragments.LoginFragmentDirections
 import com.example.seekgame.fragments.SearchFragmentDirections
+import com.example.seekgame.holders.PlatformHolder
 
-class GameListAdapter(private val listGames: MutableList<Game>, val context: Context, val onItemClick : (Int) -> Unit): RecyclerView.Adapter<GameHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_game,parent,false)
-        return GameHolder(view)
+class PlatformListAdapter(private val listPlatforms: MutableList<Platform>, val context: Context, val onItemClick : (Int) -> Unit): RecyclerView.Adapter<PlatformHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlatformHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_platform,parent,false)
+        return PlatformHolder(view)
     }
-    override fun getItemCount(): Int = listGames.size
-    override fun onBindViewHolder(holder: GameHolder, position: Int) {
-        holder.setName(listGames[position].name)
-
+    override fun getItemCount(): Int = listPlatforms.size
+    override fun onBindViewHolder(holder: PlatformHolder, position: Int) {
         Glide
             .with(context)
-            .load(listGames[position].background_image)
+            .load(listPlatforms[position].image_background)
             .centerCrop()
             .into(holder.getImageView())
 
