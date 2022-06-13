@@ -1,14 +1,24 @@
 package com.example.seekgame.entities
 
 data class Game(
-    var id: Number,
+    var id: Int,
     var name: String,
-    var background_image: String
+    var background_image: String,
+    var description: String,
+    var metacritic: Int,
+    var released: String,
+    var website: String,
+    //var platforms: List<PlatformGame>
 )
 
 data class GamesResponse(
-    var count: Number,
+    var count: Int,
     var next: String,
     var previous: String,
     var results: List<Game>
+)
+
+data class PlatformGame(
+    var platform: Platform,
+    var released_at: String
 )

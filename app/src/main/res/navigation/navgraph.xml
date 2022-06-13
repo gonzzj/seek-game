@@ -19,13 +19,29 @@
         <action
             android:id="@+id/action_searchFragment_to_gameDetail"
             app:destination="@id/gameDetailFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="searchBy"
+            app:argType="string"
+            android:defaultValue="''" />
     </fragment>
     <fragment
         android:id="@+id/platformFragment"
         android:name="com.example.seekgame.fragments.PlatformFragment"
-        android:label="PlatformFragment" />
+        android:label="PlatformFragment" >
+        <action
+            android:id="@+id/action_platformFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameDetailFragment"
         android:name="com.example.seekgame.fragments.GameDetail"
-        android:label="GameDetailFragment" />
+        android:label="GameDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

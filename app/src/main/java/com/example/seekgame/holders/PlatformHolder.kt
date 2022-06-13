@@ -10,6 +10,11 @@ import com.example.seekgame.R
 class PlatformHolder (v: View) : RecyclerView.ViewHolder(v) {
     private var view: View = v
 
+    fun setName(name: String) {
+        val txt: TextView = view.findViewById(R.id.tvPlatformItem)
+        txt.text = name
+    }
+
     fun getImageView () : ImageView {
         return view.findViewById(R.id.ivPlatformImage)
     }

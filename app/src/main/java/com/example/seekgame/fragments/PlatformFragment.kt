@@ -9,15 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.seekgame.R
 import com.example.seekgame.adapters.DeveloperListAdapter
-import com.example.seekgame.adapters.GameListAdapter
 import com.example.seekgame.adapters.PlatformListAdapter
 import com.example.seekgame.adapters.PublisherListAdapter
 import com.example.seekgame.databinding.PlatformFragmentBinding
-import com.example.seekgame.databinding.SearchFragmentBinding
 import com.example.seekgame.entities.Developer
 import com.example.seekgame.entities.Platform
 import com.example.seekgame.entities.Publisher
@@ -56,16 +52,16 @@ class PlatformFragment : Fragment() {
         binding.rvPublisherList.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         binding.rvDeveloperList.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
 
-        platformListAdapter = PlatformListAdapter(listPlatforms, requireContext()){ pos ->
-            onItemClick(pos)
+        platformListAdapter = PlatformListAdapter(listPlatforms, requireContext()){ id, searchBy ->
+            onItemClick(id, searchBy)
         }
 
-        publisherListAdapter = PublisherListAdapter(listPublishers, requireContext()){ pos ->
-            onItemClick(pos)
+        publisherListAdapter = PublisherListAdapter(listPublishers, requireContext()){ id, searchBy ->
+            onItemClick(id, searchBy)
         }
 
-        developerListAdapter = DeveloperListAdapter(listDevelopers, requireContext()){ pos ->
-            onItemClick(pos)
+        developerListAdapter = DeveloperListAdapter(listDevelopers, requireContext()){ id, searchBy ->
+            onItemClick(id, searchBy)
         }
 
         binding.rvPlatformList.adapter = platformListAdapter
@@ -134,9 +130,9 @@ class PlatformFragment : Fragment() {
         }
     }
 
-    private fun onItemClick(position: Int)  {
-        //val action = SearchFragmentDirections.actionSearchFragmentToGameDetail()
-        //binding.frameLayout.findNavController().navigate(action)
+    private fun onItemClick(id: Int, searchBy: String)  {
+        val action = PlatformFragmentDirections.actionPlatformFragmentToSearchFragment(id, searchBy)
+        binding.frameLayout.findNavController().navigate(action)
     }
 
     private fun showError() {

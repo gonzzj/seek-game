@@ -10,8 +10,9 @@
     <ImageView
         android:id="@+id/ivGameDetail"
         android:layout_width="0dp"
-        android:layout_height="274dp"
+        android:layout_height="202dp"
         android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,13 +22,13 @@
         android:id="@+id/tvGameDetailTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Title del Juego"
         android:textColor="@color/colorPrimary"
         android:textFontWeight="800"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -48,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="432dp" />
+        app:layout_constraintGuide_end="403dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -68,12 +69,14 @@
         android:id="@+id/tvGameDetailBody"
         android:layout_width="314dp"
         android:layout_height="0dp"
-        android:text="TextView"
+        android:layout_marginTop="24dp"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toBottomOf="@+id/tvGameDetailTitle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/abAddGame"
@@ -82,7 +85,17 @@
         android:backgroundTint="@color/colorPrimary"
         android:clickable="true"
         android:src="@android:drawable/ic_menu_add"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline4" />
+
+    <ProgressBar
+        android:id="@+id/pbGameDetail"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGameDetailBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivGameDetail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
