@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "244303612154",
+    "project_id": "seekgame-b9a03",
+    "storage_bucket": "seekgame-b9a03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244303612154:android:28e1af8d9be57fb1992143",
+        "android_client_info": {
+          "package_name": "com.android.seekgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244303612154-rnrdaevi7goa47f80dkl96c4h4d3lcbs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZb1PEClmZhWNT3GcCTkG30ujcA_4sG1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244303612154-rnrdaevi7goa47f80dkl96c4h4d3lcbs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

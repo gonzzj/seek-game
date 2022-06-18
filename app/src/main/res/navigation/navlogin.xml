@@ -12,9 +12,20 @@
         <action
             android:id="@+id/action_loginFragment_to_homeActivity"
             app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment2"
+            app:destination="@id/registroFragment" />
     </fragment>
     <activity
         android:id="@+id/homeActivity"
         android:name="com.example.seekgame.activities.HomeActivity"
         android:label="HomeActivity" />
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.seekgame.fragments.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" />
 </navigation>

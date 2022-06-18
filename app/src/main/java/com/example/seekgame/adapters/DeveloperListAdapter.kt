@@ -9,7 +9,7 @@ import com.example.seekgame.R
 import com.example.seekgame.entities.Developer
 import com.example.seekgame.holders.DeveloperHolder
 
-class DeveloperListAdapter(private val listDevelopers: MutableList<Developer>, val context: Context, val onItemClick : (Int, String) -> Unit): RecyclerView.Adapter<DeveloperHolder>() {
+class  DeveloperListAdapter(private val listDevelopers: MutableList<Developer>, val context: Context, val onItemClick : (Int, String) -> Unit): RecyclerView.Adapter<DeveloperHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeveloperHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_platform,parent,false)
         return DeveloperHolder(view)
