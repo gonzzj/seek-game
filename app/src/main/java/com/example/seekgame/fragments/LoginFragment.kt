@@ -42,7 +42,7 @@ class LoginFragment : Fragment() {
         btnLogin.setOnClickListener {
 
             if (txtUser.text.isNotEmpty() && txtPassword.text.isNotEmpty()) {
-
+                        //chechear si el usuario esta regstrado en firebase
                         val action = LoginFragmentDirections.actionLoginFragmentToHomeActivity()
                         v.findNavController().navigate(action)
 
