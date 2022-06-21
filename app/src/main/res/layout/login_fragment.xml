@@ -8,11 +8,11 @@
     tools:context=".LoginFragment">
 
     <EditText
-        android:id="@+id/txtUser"
+        android:id="@+id/txtMail"
         android:layout_width="306dp"
         android:layout_height="60dp"
         android:ems="10"
-        android:hint="Ingrese su usuario"
+        android:hint="Ingrese su mail"
         android:inputType="text"
         android:minWidth="260dp"
         android:minHeight="48dp"
@@ -33,7 +33,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMail" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -77,20 +77,10 @@
         android:layout_width="298dp"
         android:layout_height="70dp"
         android:src="@drawable/seek"
-        app:layout_constraintBottom_toTopOf="@+id/txtUser"
+        app:layout_constraintBottom_toTopOf="@+id/txtMail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

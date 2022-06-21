@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RegistroFragment">
+
+    <Button
+        android:id="@+id/btnRegisterNewUser"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Registrar  usuario"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassRegister2" />
+
+    <EditText
+        android:id="@+id/txtPassRegister"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:hint="Ingrese contraseña"
+        android:inputType="textPassword"
+        android:minWidth="260dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPassRegister2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMailRegister" />
+
+    <EditText
+        android:id="@+id/txtMailRegister"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:hint="Ingrese mail"
+        android:inputType="text"
+        android:minWidth="260dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPassRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="47dp" />
+
+    <ImageView
+        android:id="@+id/ivLogo2"
+        android:layout_width="298dp"
+        android:layout_height="70dp"
+        android:src="@drawable/seek"
+        app:layout_constraintBottom_toTopOf="@+id/txtMailRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="557dp" />
+
+    <EditText
+        android:id="@+id/txtPassRegister2"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:hint="Repita contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegisterNewUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassRegister" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

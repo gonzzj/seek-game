@@ -6,15 +6,19 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.seekgame.fragments.HomeFragment"
+        android:name="com.ort.seekgame.fragments.HomeFragment"
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.seekgame.fragments.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:name="com.ort.seekgame.fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.seekgame.fragments.SearchFragment"
+        android:name="com.ort.seekgame.fragments.SearchFragment"
         android:label="SearchFragment" >
         <action
             android:id="@+id/action_searchFragment_to_gameDetail"
@@ -30,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/platformFragment"
-        android:name="com.example.seekgame.fragments.PlatformFragment"
+        android:name="com.ort.seekgame.fragments.PlatformFragment"
         android:label="PlatformFragment" >
         <action
             android:id="@+id/action_platformFragment_to_searchFragment"
@@ -38,10 +42,14 @@
     </fragment>
     <fragment
         android:id="@+id/gameDetailFragment"
-        android:name="com.example.seekgame.fragments.GameDetail"
+        android:name="com.ort.seekgame.fragments.GameDetail"
         android:label="GameDetailFragment" >
         <argument
             android:name="id"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.ort.seekgame.fragments.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>
