@@ -11,19 +11,11 @@
         android:id="@+id/ivProfileBanner"
         android:layout_width="0dp"
         android:layout_height="207dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/ivProfileIcon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_launcher_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+        app:srcCompat="@drawable/banner_default" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
@@ -40,23 +32,13 @@
         app:layout_constraintGuide_begin="177dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtEmailProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:text="Nombre usuario"
-        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintStart_toEndOf="@+id/ivProfileIcon" />
-
-    <Button
-        android:id="@+id/btnEditProfile"
-        android:layout_width="93dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Editar"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintEnd_toStartOf="@+id/guideline14" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
@@ -73,20 +55,52 @@
         app:layout_constraintGuide_begin="257dp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfileList"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnLogout"
+        android:layout_width="66dp"
+        android:layout_height="42dp"
+        android:text="Logout"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Juegos favoritos"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+
+    <ProgressBar
+        android:id="@+id/pbProfileList"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline14" />
+        app:layout_constraintBottom_toBottomOf="@+id/rvProfileList"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/rvProfileList" />
+
+    <ImageView
+        android:id="@+id/ivProfileIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/avatar_default"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
 </androidx.constraintlayout.widget.ConstraintLayout>

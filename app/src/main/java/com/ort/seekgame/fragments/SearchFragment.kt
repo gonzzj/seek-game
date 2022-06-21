@@ -23,7 +23,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class SearchFragment : Fragment(), SearchView.OnQueryTextListener {
-    private var apiKey: String = "90444bab91d84c889bf5ddc30270aa48"
+
     private lateinit var gameListAdapter: GameListAdapter
     private var listGames : MutableList<Game> = ArrayList()
     private var _binding: SearchFragmentBinding? = null
@@ -61,6 +61,7 @@ class SearchFragment : Fragment(), SearchView.OnQueryTextListener {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun searchByName(query: String, id: Int, searchBy: String) {
+        val apiKey = getString(R.string.rawg_api_key)
         var searchByParam = ""
         if (searchBy.isNotEmpty()) { searchByParam = "&$searchBy=$id" }
         CoroutineScope(Dispatchers.IO).launch {

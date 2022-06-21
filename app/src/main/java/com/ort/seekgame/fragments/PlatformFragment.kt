@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ort.seekgame.R
 import com.ort.seekgame.adapters.DeveloperListAdapter
 import com.ort.seekgame.adapters.PlatformListAdapter
 import com.ort.seekgame.adapters.PublisherListAdapter
@@ -24,7 +25,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class PlatformFragment : Fragment() {
-    private var apiKey: String = "90444bab91d84c889bf5ddc30270aa48"
+
     private lateinit var platformListAdapter: PlatformListAdapter
     private lateinit var publisherListAdapter: PublisherListAdapter
     private lateinit var developerListAdapter: DeveloperListAdapter
@@ -75,6 +76,7 @@ class PlatformFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun setPlatforms() {
+        val apiKey = getString(R.string.rawg_api_key)
         CoroutineScope(Dispatchers.IO).launch {
             val call = RetrofitBuilder.get().create(APIService::class.java).getPlatforms("platforms?key=$apiKey");
             val response = call.body()
@@ -94,6 +96,7 @@ class PlatformFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun setPublishers() {
+        val apiKey = getString(R.string.rawg_api_key)
         CoroutineScope(Dispatchers.IO).launch {
             val call = RetrofitBuilder.get().create(APIService::class.java).getPublishers("publishers?key=$apiKey");
             val response = call.body()
@@ -113,6 +116,7 @@ class PlatformFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun setDevelopers() {
+        val apiKey = getString(R.string.rawg_api_key)
         CoroutineScope(Dispatchers.IO).launch {
             val call = RetrofitBuilder.get().create(APIService::class.java).getDevelopers("developers?key=$apiKey");
             val response = call.body()

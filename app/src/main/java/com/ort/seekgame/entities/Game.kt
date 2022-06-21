@@ -6,7 +6,6 @@ data class Game(
     var background_image: String,
     var description: String,
     var metacritic: Int,
-    //var platforms: List<PlatformGame>
 )
 
 data class GamesResponse(

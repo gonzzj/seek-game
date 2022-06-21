@@ -16,6 +16,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.ort.seekgame.R
+import com.ort.seekgame.entities.Game
 import com.ort.seekgame.entities.User
 
 class RegistroFragment : Fragment() {
@@ -62,10 +63,10 @@ class RegistroFragment : Fragment() {
                         val user = auth.currentUser
                         user.let {
                             val email = user?.email
-                            db.collection("users").add(User(email, "", ""))
+                            db.collection("users").document(email!!).set(User(email, "", "", emptyList()))
                         }
 
-                        val action = RegistroFragmentDirections.actionRegistroFragmentToHomeActivity(true)
+                        val action = RegistroFragmentDirections.actionRegistroFragmentToHomeActivity()
                         v.findNavController().navigate(action)
                     } else {
                         Log.w("AUTH", "signInWithEmail:failure", task.exception)
