@@ -17,11 +17,11 @@
         android:name="com.ort.seekgame.fragments.ProfileFragment"
         android:label="ProfileFragment" >
         <action
-            android:id="@+id/action_profileFragment_to_loginFragment2"
-            app:destination="@id/loginFragment2" />
-        <action
             android:id="@+id/action_profileFragment_to_gameDetailFragment"
             app:destination="@id/gameDetailFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeActivity4"
+            app:destination="@id/mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -55,8 +55,9 @@
             android:name="id"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/loginFragment2"
-        android:name="com.ort.seekgame.fragments.LoginFragment"
-        android:label="LoginFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.ort.seekgame.activities.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/activity_main" />
 </navigation>

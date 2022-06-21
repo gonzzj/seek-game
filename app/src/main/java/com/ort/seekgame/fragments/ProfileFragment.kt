@@ -35,6 +35,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        auth = Firebase.auth
         v = inflater.inflate(R.layout.profile_fragment, container, false)
         btnLogout = v.findViewById(R.id.btnLogout)
         txtEmailProfle = v.findViewById(R.id.txtEmailProfile)
@@ -85,7 +86,7 @@ class ProfileFragment : Fragment() {
 
         btnLogout.setOnClickListener {
             auth.signOut()
-            val action = ProfileFragmentDirections.actionProfileFragmentToLoginFragment2()
+            val action = ProfileFragmentDirections.actionProfileFragmentToHomeActivity4()
             v.findNavController().navigate(action)
         }
     }
